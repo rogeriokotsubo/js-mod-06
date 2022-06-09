@@ -31,8 +31,6 @@ function Desarmar() {
     btn.disabled = false;
     btn.textContent = 'Armar Bomba';
     btn.style.cursor = 'pointer';
-    counterDown.textContent =" ";
-    counterDown.style.color = '#000';
   }  
 }
 

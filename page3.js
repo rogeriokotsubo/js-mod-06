@@ -64,7 +64,7 @@ function TocarAlarme() {
   }
 
 function Contagem(){
-  counter -= 1;
+  counter --;
   const minutos = Math.floor(counter/60);
   counterDown.textContent=minutos + ' min  '+ (counter - (minutos*60)) +' seg';
   if (counter<=warning){
