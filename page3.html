@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta property="og:description" content="Alpha Ed/tech - Módulo 07 - JavaScript - Parte 06" />
+    <meta property="og:url" content="https://rogeriokotsubo.github.io/js-mod-06/" />
+    <meta property="og:determiner" content="a" />
+    <meta property="og:locale" content="pt_BR" /> 
+    <title>JS - Modulo 07 - Parte 06</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav id="menu">
+          <a class="a-menu" href="./index.html">Exercício 1</a>
+          <a class="a-menu" href="./page2.html">Exercício 2</a>
+          <a class="a-menu" href="./page3.html">Exercício 3</a>
+      </nav>
+    </header>
+
+
+  <!-- CORPO DA PÁGINA -->
+    <main id="exercise3">
+      <section class="exercise">
+        <h1>Exercício 3</h1>
+        <br />
+        <p>Utilizando a mesma estrutura de 3 arquivos (HTML+CSS+JS):</p>
+        <p>Crie uma página web que contenha um alarme no qual o usuário define os minutos (máximo 59 minutos) e segundos e clica em um botão que inicia a contagem regressiva, considerando:</p>
+        <ol> 
+          <li>Utilizar o HTML select para seleção dos minutos e segundos;</li>
+          <li>Criar um botão que inicia a contagem regressiva que ao ser clicado este se torna um botão de desarmar alarme;</li>        
+          <li>O contador regressivo mostra o tempo a cada segundo;</li>        
+          <li>Quando faltar menos de 5% do tempo inicial mudar a interface de contagem para informar que o tempo está acabando;</li>        
+          <li>Ao término da contagem, o tempo deve parar de ser decrementado e deve-se disparar um alarme (som de alarme) informando que o tempo acabou;</li>        
+          <li>Se o usuário clicar no botão de desarmar alarme, a contagem deve ser parada e, caso o alarme esteja tocando, o som deve parar, transformando o botão para que possa armar o alarme novamente.</li>        
+        </ol>
+        <div class="ctn-input">
+          <h2 id="h2-titulo">Definir o tempo:</h2>          
+          <form id="frm-inputs"> 
+            <div class="ctn-card">
+              <div class="ctn-select">
+                <select id="id-minutes">
+                </select>  
+                <span class="lbl-form">Minutos</span>
+              </div>
+              <div class="ctn-select">
+                <select id="id-seconds">
+                </select>  
+                <span class="lbl-form">Segundos</span>
+              </div>  
+            </div>
+            <div id="ctn-check">
+              <button id="btn-check" type="button">Iniciar Alarme</button>
+            </div>                   
+          </form>
+          <h2 id="h2-alarme">Alarme tocará em:</h2>          
+          <h2 id="h2-counter"></h2>          
+        </div>    
+        <audio id="audio" loop>
+          <source src="./assets/sound/alarm.wav" type="audio/wav">
+          Seu navegador não suporta este tipo de áudio.
+        </audio>
+        <audio id="audio-tick">
+          <source src="./assets/sound/tick.wav" type="audio/wav">
+          Seu navegador não suporta este tipo de áudio.
+        </audio>
+      </section>    
+    </main>
+
+    <script src="page3.js"></script>
+  </body>
+
+</html>
